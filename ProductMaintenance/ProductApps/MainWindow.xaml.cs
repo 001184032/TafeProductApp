@@ -41,6 +41,9 @@ namespace ProductApps
                 double deliveryCharge2 = 5.00;
                 double totalCharge2 = TotalPayment2 + TotalPayment2 + deliveryCharge2;
                 totalCharge2TextBox.Text = $"${totalCharge2:F2}";
+                double GTS = 1.1;
+                double totalCharge3 = (TotalPayment + deliveryCharge + deliveryCharge2) * GTS;
+                totalCharge3TextBox.Text = $"${totalCharge3:F2}";
 
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
             }
