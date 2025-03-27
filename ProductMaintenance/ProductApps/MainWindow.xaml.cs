@@ -42,6 +42,10 @@ namespace ProductApps
                 decimal deliveryChargeAfterWrap = 5.00m;
                 decimal totalChargeAfterWrap = totalCharge + deliveryChargeAfterWrap;
                 totalChargeAfterWrapTextBox.Text = $"${totalChargeAfterWrap:F2}";
+                //Total Charge After GST@10% =  (Total payment + $25.00 + $5.00) * 1.1
+                decimal GTS = 1.1m;
+                decimal totalChargeAfterGts = (totalChargeAfterWrap) * GTS;
+                totalChargeAfterGtsTextBox.Text = $"${totalChargeAfterGts:F2}";
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
             }
             catch (FormatException)
