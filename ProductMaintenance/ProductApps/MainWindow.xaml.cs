@@ -38,6 +38,10 @@ namespace ProductApps
                 decimal deliveryCharge = 25.00m;
                 decimal totalCharge = TotalPayment + deliveryCharge;
                 totalChargeTextBox.Text = $"${totalCharge:F2}";
+                //Total Charge after wrap = TotalPayment + $25.00 + $5.00
+                decimal deliveryChargeAfterWrap = 5.00m;
+                decimal totalChargeAfterWrap = totalCharge + deliveryChargeAfterWrap;
+                totalChargeAfterWrapTextBox.Text = $"${totalChargeAfterWrap:F2}";
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
             }
             catch (FormatException)
